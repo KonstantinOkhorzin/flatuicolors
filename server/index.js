@@ -4,6 +4,8 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 
+import palettesRouter from './routes/palettes.js';
+
 dotenv.config();
 
 const { PORT = 3000, DB_HOST } = process.env;
@@ -12,6 +14,8 @@ const app = express();
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
+
+app.use('/api/palettes', palettesRouter);
 
 app.use((_, res) => {
   res.status(404).json({ message: 'Route not found' });
