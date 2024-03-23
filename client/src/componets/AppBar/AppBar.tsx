@@ -5,9 +5,7 @@ const AppBar = () => {
   return (
     <Header>
       <Container>
-        <Logo>
-          <a href='/'>FLAT UI COLORS</a>
-        </Logo>
+        <Logo>FLAT UI COLORS</Logo>
       </Container>
     </Header>
   );
