@@ -1,9 +1,9 @@
-import { FC, ReactElement } from 'react';
+import { FC, ReactNode } from 'react';
 
 import { StyledContainer } from './Container.styled';
 
 interface Props {
-  children: ReactElement;
+  children: ReactNode;
 }
 
 const Container: FC<Props> = ({ children }) => {
