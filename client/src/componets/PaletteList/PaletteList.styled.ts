@@ -6,4 +6,8 @@ export const List = styled.ul`
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px 20px;
+
+  @media screen and (max-width: 991px) {
+    justify-content: center;
+  }
 `;
