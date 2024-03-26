@@ -8,7 +8,4 @@ export const FluidContainer = styled.div`
   background: #3c40c6;
   background-image: url(${BgStarts});
   color: #fff;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 600;
-  font-style: normal;
 `;

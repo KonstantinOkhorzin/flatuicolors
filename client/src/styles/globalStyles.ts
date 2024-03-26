@@ -21,7 +21,6 @@ export const globalStyles = css`
   textarea,
   select {
     font: inherit;
-    line-height: inherit;
   }
   input::-ms-clear {
     display: none;
@@ -80,5 +79,8 @@ export const globalStyles = css`
 
   body {
     height: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
 `;

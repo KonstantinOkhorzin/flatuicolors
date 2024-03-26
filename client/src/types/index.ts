@@ -2,10 +2,10 @@ export interface IPalette {
   _id: string;
   paletteName: string;
   emoji: string;
-  colors: Color[];
+  colors: IColor[];
 }
 
-interface Color {
+export interface IColor {
   name: string;
   color: string;
   _id: string;
