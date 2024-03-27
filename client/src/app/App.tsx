@@ -6,6 +6,7 @@ import { FluidContainer } from './App.styled';
 import { IPalette, Status } from '../types';
 import { getAllPalettes } from '../services';
 import Container from '../componets/Container';
+import Spinner from '../componets/Spinner';
 
 function App() {
   const [paletteList, setPaletteList] = useState<IPalette[] | null>(null);
@@ -29,11 +30,10 @@ function App() {
     <FluidContainer>
       <AppBar />
       <Container>
-        {status === Status.PENDING && <p>Loading...</p>}
+        {status === Status.PENDING && <Spinner size={36} />}
         {status === Status.FULFILLED && paletteList && <PaletteList paletteList={paletteList} />}
         {status === Status.REJECTED && <p>{error}</p>}
       </Container>
-      
     </FluidContainer>
   );
 }
