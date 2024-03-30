@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Header = styled.header`
   display: flex;
   align-items: start;
+  justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
 `;
@@ -20,6 +21,15 @@ export const LinkToBack = styled.button`
   display: flex;
   align-items: center;
   gap: 7px;
+  color: #000;
+  cursor: pointer;
+`;
+
+export const ToggleButtonSound = styled.button`
+  height: 45px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
   color: #000;
   cursor: pointer;
 `;
