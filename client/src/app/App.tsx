@@ -7,6 +7,7 @@ import { IPalette, Status } from '../types';
 import { getAllPalettes } from '../services';
 import Container from '../componets/Container';
 import Spinner from '../componets/Spinner';
+import ErrorMessage from '../componets/ErrorMessage';
 
 function App() {
   const [paletteList, setPaletteList] = useState<IPalette[] | null>(null);
@@ -32,7 +33,7 @@ function App() {
       <Container>
         {status === Status.PENDING && <Spinner size={36} />}
         {status === Status.FULFILLED && paletteList && <PaletteList paletteList={paletteList} />}
-        {status === Status.REJECTED && <p>{error}</p>}
+        {status === Status.REJECTED && <ErrorMessage text={error} />}
       </Container>
     </FluidContainer>
   );
