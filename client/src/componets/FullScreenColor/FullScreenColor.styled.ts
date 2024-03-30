@@ -14,7 +14,6 @@ export const Message = styled.p`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-top: -120px;
   width: 100%;
   background-color: hsla(0, 0%, 100%, 0.2);
   text-align: center;
@@ -22,6 +21,10 @@ export const Message = styled.p`
   color: #ecf0f1;
   text-shadow: 2px 2px #2c3e50;
   padding: 30px 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 60px;
+  }
   span {
     top: 50%;
     text-shadow: 1px 1px #444;
