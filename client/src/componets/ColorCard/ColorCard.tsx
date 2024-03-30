@@ -20,11 +20,16 @@ const ColorCard: FC<Props> = ({ color: { color, name } }) => {
         <CopyText />
         <CardTitle>{name}</CardTitle>
       </Card>
-      {openFullScreenColor && (
-        <Modal>
-          <FullScreenColor color={color} closeFullScreenColor={onToggleFullScreenColor} />
-        </Modal>
-      )}
+
+      <Modal
+        isVisible={openFullScreenColor}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <FullScreenColor color={color} closeFullScreenColor={onToggleFullScreenColor} />
+      </Modal>
     </>
   );
 };

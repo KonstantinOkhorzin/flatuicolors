@@ -28,11 +28,16 @@ const PaletteCard: FC<Props> = ({ palette }) => {
           <p>{emoji}</p>
         </CardFooter>
       </Card>
-      {openModal && (
-        <Modal>
-          <Colors onCloseModal={onToggleModal} palette={palette} />
-        </Modal>
-      )}
+
+      <Modal
+        isVisible={openModal}
+        initial={{ x: '100vw' }}
+        animate={{ x: 0 }}
+        exit={{ x: '100vw' }}
+        transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+      >
+        <Colors onCloseModal={onToggleModal} palette={palette} />
+      </Modal>
     </>
   );
 };
